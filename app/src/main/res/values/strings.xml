@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">税局风采</string>
+    <string name="home_title">税局风采</string>
+    <string name="back_home">返回首页</string>
+    <string name="gallery_swdj">税务登记</string>
+    <string name="gallery_swrd">税务认定</string>
+    <string name="gallery_fpbl">发票办理</string>
+    <string name="gallery_sbns">申报纳税</string>
+    <string name="gallery_yhbl">优惠办理</string>
+    <string name="gallery_zmbl">证明办理</string>
+    <string name="gallery_xczx">宣传咨询</string>
+    <string name="gallery_qywh">权益维护</string>
+    <string name="gallery_bsfw">办税服务</string>
+    <string name="gallery_title">税局风采</string>
+    <string name="empty" />
+    <string name="you_may">您可能想要观看：</string>
+</resources>

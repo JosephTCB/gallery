@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="dirs">
+        <item>/税务登记</item>
+        <item>/税务认定</item>
+        <item>/发票办理</item>
+        <item>/申报纳税</item>
+        <item>/优惠办理</item>
+        <item>/证明办理</item>
+        <item>/宣传咨询</item>
+        <item>/权益维护</item>
+        <item>/办税服务</item>
+    </array>
+</resources>

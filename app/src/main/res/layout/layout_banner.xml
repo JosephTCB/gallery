@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="banner"
+            type="com.inspur.tax.roboat.data.BannerSource" />
+    </data>
+
+    <ImageView
+        android:id="@+id/homeBanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:contentDescription="@string/empty"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        app:banner="@{banner}" />
+</layout>

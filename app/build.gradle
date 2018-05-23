@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.inspur.tax.roboat"
+        minSdkVersion 25
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+androidExtensions {
+    experimental = true
+}
+
+ext {
+    junit_version = '4.12'
+    android_test_version = '1.0.1'
+    support_version = '27.1.1'
+    constraint_version = '1.1.0'
+    kotlin_coroutines_version = '0.22.5'
+    arch_lifecycle_version = '1.1.1'
+
+}
+
+dependencies {
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    // Kotlin lib
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    // Support libs
+    implementation "com.android.support:support-v4:$support_version"
+    implementation "com.android.support:appcompat-v7:$support_version"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_version"
+    // kotlin coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "com.android.support.test:rules:$android_test_version"
+    androidTestImplementation "com.android.support.test:runner:$android_test_version"
+    // AAC
+    implementation "android.arch.lifecycle:extensions:$arch_lifecycle_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$arch_lifecycle_version"
+    kapt "com.android.databinding:compiler:$build_tool_version"
+}
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
